@@ -100,11 +100,12 @@ const degerlendirmeler = [
     {isim: "Reyna", puan: 3.5, geribildirim: ""},
 ]
 
+   
 /*  Görev 3 (ototest yok):  
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-
+console.log(degerlendirmeler[5]);
 
 
 /*  Görev 4 (ototest yok):  
@@ -112,7 +113,8 @@ const degerlendirmeler = [
 	1. Bu geribildirimi Reyna'nın değerlendirmesine ekleyin - "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
-
+degerlendirmeler[7].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+console.log(degerlendirmeler);
 
 
 /*  Görev 5: 
@@ -127,12 +129,23 @@ const degerlendirmeler = [
 */
 
 
-function DegerledirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
+function DegerledirmeEkle(arr,customer,point,feedback){
+	// let obj = {};
+	// obj.isim = customer;
+	// obj.puan = point;
+	// obj.geribildirim = feedback;
+
 	
+// or this way 
+     let obj = {
+		isim : customer,
+		puan : point,
+		geribildirim : feedback
+	     }    
+		 arr.push(obj);
+	return arr ;
 }
-
-
+console.log(DegerledirmeEkle(degerlendirmeler, 'Hurşut', 2, 'Boktan yemekler!'));
 
 /*  Görev 6: 
 	Dizideki değerlendirmelerin anahtarına(key,index) bağlı olarak bir değerlendirme döndüren bir fonksiyon yazın
