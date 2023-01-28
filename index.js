@@ -113,7 +113,7 @@ console.log(degerlendirmeler[5]);
 	1. Bu geribildirimi Reyna'nın değerlendirmesine ekleyin - "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
-degerlendirmeler[7].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+degerlendirmeler[degerlendirmeler.length-1].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 console.log(degerlendirmeler);
 
 
@@ -178,12 +178,12 @@ console.log(AnahtardanDegerlendirmeAl(degerlendirmeler,0));
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(arr) {
+	let yenisonindex =arr[arr.length-1].isim + ' isimli kişi ' + arr[arr.length-1].puan + ' puan verdi ve şunları yazdı: ' + arr[arr.length-1].geribildirim;
+	return yenisonindex ;
 } 
 
-
-
+console.log(SonDegerlendirmeyiAl(degerlendirmeler));
 /////////////// BONUS  GÖRVLER////////////////////
 
 /**  BONUS 1:  
