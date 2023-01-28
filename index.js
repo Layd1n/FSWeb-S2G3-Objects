@@ -99,13 +99,12 @@ const degerlendirmeler = [
     {isim: "Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."},
     {isim: "Reyna", puan: 3.5, geribildirim: ""},
 ]
-
+console.log(degerlendirmeler.length);
    
 /*  Görev 3 (ototest yok):  
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-console.log(degerlendirmeler[5]);
 
 
 /*  Görev 4 (ototest yok):  
@@ -219,10 +218,20 @@ console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler,4));
 	
 */
 
-function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function UzunDegerlendirmeleriAl(arr) {
+	let newArr = [];
+
+	for ( let i = 0 ; i<arr.length ; i++){
+		let a =arr[i].geribildirim
+		if(a.split(" ").length>15){
+			newArr.push(arr[i]);
+		}
+		
+	}
+    return newArr;
 }
 
+console.log(UzunDegerlendirmeleriAl(degerlendirmeler));
 
 /*  BONUS 3:  
 	Bu ek görevde degerlendirmeler dizisi kullanılmayacak!  Bu görevde kendi nesnenizi yaratmanız gerekmektedir.
@@ -242,9 +251,8 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 */
 
 
-function arabaYapici(/* Kodlar buraya */) {
-    /* Kodlar buraya */
-    
+function arabaYapici() {
+   
 }
 
 
