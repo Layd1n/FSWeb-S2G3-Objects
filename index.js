@@ -15,9 +15,22 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 */
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
+function MenuElemaniOlustur(type,price,category){
+	// let obj = {
+	// 	isim : type,
+	// 	fiyat : price ,
+	// 	kategori : category
+
+//    return obj;
+
+   //or this way ;
+   let obj={};
+   obj.isim = type;
+   obj.fiyat = price;
+   obj.kategori = category;
+   return obj;
 }
+console.log(MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler'));
 
 
 
@@ -30,6 +43,9 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
+   console.log(MenuElemaniOlustur('Et Döner', 20 , 'Dönerler'));
+   console.log(MenuElemaniOlustur('Tavuk Tantuni', 25, 'Tantuniler'));
+   console.log(MenuElemaniOlustur('Tiramisu', 35 , 'Tatlılar'));
 
 
 
@@ -52,8 +68,25 @@ const burger = {
 	kategori: "Öğle Yemeği", 
 
 }
+    burger.indirim =  function (müsteri){
+		// if (müsteri == 'öğrenci' || müsteri == 'öğretmen'){
+		// 	return burger.fiyat*75/100;
+		// }
+		// else {
+		// 	return burger.fiyat*90/100;
+		// }
 
-
+// or this way
+if (müsteri == 'diğer'){
+	return burger.fiyat*90/100
+}
+   else {
+	return burger.fiyat*75/100
+   }
+};
+  
+ console.log(burger.indirim("öğrenci"));
+//console.log(m)
 
 ///////////////Değerlendirmeler (MVP)///////////////////
 const degerlendirmeler = [
