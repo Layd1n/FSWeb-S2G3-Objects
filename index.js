@@ -145,7 +145,7 @@ function DegerledirmeEkle(arr,customer,point,feedback){
 		 arr.push(obj);
 	return arr ;
 }
-console.log(DegerledirmeEkle(degerlendirmeler, 'Hurşut', 2, 'Boktan yemekler!'));
+//console.log(DegerledirmeEkle(degerlendirmeler, 'Hurşut', 2, 'Boktan yemekler!'));
 
 /*  Görev 6: 
 	Dizideki değerlendirmelerin anahtarına(key,index) bağlı olarak bir değerlendirme döndüren bir fonksiyon yazın
@@ -199,12 +199,19 @@ console.log(SonDegerlendirmeyiAl(degerlendirmeler));
     {isim:"Latife", puan: 4, geribildirim: "Kesinlikle karaoke Cumalarını seviyorum! Yemek ve içki çeşitleri iyi."}
 	]
 */
+console.log('HelloWorld!');
 
-function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
-}
+function PuanaGoreDegerlendirmeAl(arr,number) {
+	let arrPoint = [];
+    for (let i=0 ; i<arr.length ; i++ ){
+		if(arr[i].puan >= number && arr[i].puan<5 ){
+			arrPoint.push(arr[i]);
+		}
+	}
+	return arrPoint;
+	}
 
-
+console.log(PuanaGoreDegerlendirmeAl(degerlendirmeler,4));
 /*  BONUS 2:    
 	UzunDegerlendirmeleriAl fonksiyonuna aşağıdakileri uygulayın:
 	1. Tüm değerlendirmeleri içeren diziyi alacak
