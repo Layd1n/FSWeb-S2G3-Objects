@@ -135,9 +135,9 @@ function DegerledirmeEkle(arr,customer,point,feedback){
 	// obj.puan = point;
 	// obj.geribildirim = feedback;
 
-	
-// or this way 
-     let obj = {
+	// or this way 
+    
+	let obj = {
 		isim : customer,
 		puan : point,
 		geribildirim : feedback
@@ -158,14 +158,14 @@ console.log(DegerledirmeEkle(degerlendirmeler, 'Hurşut', 2, 'Boktan yemekler!')
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function AnahtardanDegerlendirmeAl(arr,index) {
+   let a = arr[index].isim +' isimli kişi '+ arr[index].puan +' puan verdi ve şunları yazdı: ' + arr[index].geribildirim;
+   return a;
+};
 
-}
+console.log(AnahtardanDegerlendirmeAl(degerlendirmeler,0));
 
-
-
-/*  Görev 7:  
+	/*  Görev 7:  
 	Diziden en son değerlendirmeyi döndüren adı `SonDegerlendirmeyiAl` olan bir fonksiyon yazın 
 	
 	SonDegerlendirmeyiAl fonksiyonuna aşağıdakileri uygulayın:
