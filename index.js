@@ -105,15 +105,32 @@ console.log(degerlendirmeler.length);
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-
+   
+    for(let i=0 ; i<degerlendirmeler.length ; i++){
+		if(degerlendirmeler.isim == 'Ahmet'){
+			console.log(degerlendirmeler[i].geribildirim);
+		}
+	}
 
 /*  Görev 4 (ototest yok):  
 	Reyna'nın geribildirimi girilmemiş! Aşağıdakileri uygulayın: (fonksiyona gerek yok) 
 	1. Bu geribildirimi Reyna'nın değerlendirmesine ekleyin - "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
-degerlendirmeler[degerlendirmeler.length-1].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
-console.log(degerlendirmeler);
+//degerlendirmeler[degerlendirmeler.length-1].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+
+//or this way
+for(let i=0 ; i<degerlendirmeler.length ; i++){
+	if(degerlendirmeler[i].geribildirim == ""){
+		degerlendirmeler[i].geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım" ;
+	}
+}
+// or this way
+// for(let i=0 ; i<degerlendirmeler.length ; i++){
+// 	if(degerlendirmeler.isim == 'Reyna'){
+// 		degerlendirmeler[i].geribildirim ="bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+// 	}
+console.log(degerlendirmeler[degerlendirmeler.length-1]);
 
 
 /*  Görev 5: 
@@ -203,7 +220,9 @@ console.log('HelloWorld!');
 function PuanaGoreDegerlendirmeAl(arr,number) {
 	let arrPoint = [];
     for (let i=0 ; i<arr.length ; i++ ){
-		if(arr[i].puan >= number && arr[i].puan<5 ){
+		if(Math.floor(arr[i].puan) == number){
+		// or this way
+		//if(arr[i].puan >= number && arr[i].puan<number+1 ){
 			arrPoint.push(arr[i]);
 		}
 	}
@@ -222,7 +241,7 @@ function UzunDegerlendirmeleriAl(arr) {
 	let newArr = [];
 
 	for ( let i = 0 ; i<arr.length ; i++){
-		let a =arr[i].geribildirim
+		let a = arr[i].geribildirim
 		if(a.split(" ").length>15){
 			newArr.push(arr[i]);
 		}
